@@ -1,4 +1,4 @@
-# CinemaPeak 🎬
+# CinemaPeak
 
 ## Як запустити:
 1. `dotnet run --project src/CinemaPeak.Console`
