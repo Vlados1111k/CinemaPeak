@@ -1,3 +1,9 @@
-# CinemaPeak
+# CinemaPeak 🎬
 
-**CinemaPeak** — система управління кінотеатром (Capstone-проєкт).
+## Як запустити:
+1. `dotnet run --project src/CinemaPeak.Console`
+
+## Що зроблено:
+- Архітектура (Domain, Application, Infrastructure)
+- Юніт-тести
+- GitHub Actions

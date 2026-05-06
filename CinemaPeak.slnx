@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CinemaPeak.Application/CinemaPeak.Application.csproj" />
+    <Project Path="src/CinemaPeak.Console/CinemaPeak.Console.csproj" />
+    <Project Path="src/CinemaPeak.Domain/CinemaPeak.Domain.csproj" />
+    <Project Path="src/CinemaPeak.Infrastructure/CinemaPeak.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CinemaPeak.Tests/CinemaPeak.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,12 @@
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\bin\Debug\net10.0\CinemaPeak.Domain.deps.json
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\bin\Debug\net10.0\CinemaPeak.Domain.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\bin\Debug\net10.0\CinemaPeak.Domain.pdb
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\CinemaPeak.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\CinemaPeak.Domain.AssemblyInfoInputs.cache
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\CinemaPeak.Domain.AssemblyInfo.cs
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\CinemaPeak.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\CinemaPeak.Domain.sourcelink.json
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\CinemaPeak.Domain.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\refint\CinemaPeak.Domain.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\CinemaPeak.Domain.pdb
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Domain\obj\Debug\net10.0\ref\CinemaPeak.Domain.dll

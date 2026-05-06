@@ -1,0 +1,73 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "CinemaPeak.Console/1.0.0": {
+        "dependencies": {
+          "CinemaPeak.Application": "1.0.0",
+          "CinemaPeak.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "CinemaPeak.Console.dll": {}
+        }
+      },
+      "CinemaPeak.Application/1.0.0": {
+        "dependencies": {
+          "CinemaPeak.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CinemaPeak.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CinemaPeak.Domain/1.0.0": {
+        "runtime": {
+          "CinemaPeak.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CinemaPeak.Infrastructure/1.0.0": {
+        "dependencies": {
+          "CinemaPeak.Application": "1.0.0",
+          "CinemaPeak.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CinemaPeak.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CinemaPeak.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CinemaPeak.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CinemaPeak.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CinemaPeak.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

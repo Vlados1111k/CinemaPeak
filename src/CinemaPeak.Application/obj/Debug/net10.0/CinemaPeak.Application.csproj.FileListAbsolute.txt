@@ -1,0 +1,16 @@
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\bin\Debug\net10.0\CinemaPeak.Application.deps.json
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\bin\Debug\net10.0\CinemaPeak.Application.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\bin\Debug\net10.0\CinemaPeak.Application.pdb
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\bin\Debug\net10.0\CinemaPeak.Domain.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\bin\Debug\net10.0\CinemaPeak.Domain.pdb
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.csproj.AssemblyReference.cache
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.AssemblyInfoInputs.cache
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.AssemblyInfo.cs
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.csproj.CoreCompileInputs.cache
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.sourcelink.json
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPe.76D14EE4.Up2Date
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\refint\CinemaPeak.Application.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\CinemaPeak.Application.pdb
+C:\Users\Komp\Desktop\програмування\CinemaPeak\src\CinemaPeak.Application\obj\Debug\net10.0\ref\CinemaPeak.Application.dll
