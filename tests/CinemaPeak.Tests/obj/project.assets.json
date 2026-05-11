@@ -416,6 +416,20 @@
         "runtime": {
           "bin/placeholder/CinemaPeak.Domain.dll": {}
         }
+      },
+      "CinemaPeak.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "CinemaPeak.Application": "1.0.0",
+          "CinemaPeak.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CinemaPeak.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CinemaPeak.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -936,12 +950,18 @@
       "type": "project",
       "path": "../../src/CinemaPeak.Domain/CinemaPeak.Domain.csproj",
       "msbuildProject": "../../src/CinemaPeak.Domain/CinemaPeak.Domain.csproj"
+    },
+    "CinemaPeak.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../src/CinemaPeak.Infrastructure/CinemaPeak.Infrastructure.csproj",
+      "msbuildProject": "../../src/CinemaPeak.Infrastructure/CinemaPeak.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "CinemaPeak.Application >= 1.0.0",
       "CinemaPeak.Domain >= 1.0.0",
+      "CinemaPeak.Infrastructure >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
@@ -985,6 +1005,9 @@
             },
             "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Domain\\CinemaPeak.Domain.csproj": {
               "projectPath": "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Domain\\CinemaPeak.Domain.csproj"
+            },
+            "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Infrastructure\\CinemaPeak.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Infrastructure\\CinemaPeak.Infrastructure.csproj"
             }
           }
         }

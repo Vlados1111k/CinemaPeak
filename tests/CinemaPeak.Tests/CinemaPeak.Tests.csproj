@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\CinemaPeak.Domain\CinemaPeak.Domain.csproj" />
     <ProjectReference Include="..\..\src\CinemaPeak.Application\CinemaPeak.Application.csproj" />
+    <ProjectReference Include="..\..\src\CinemaPeak.Infrastructure\CinemaPeak.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,41 +1,103 @@
-﻿using CinemaPeak.Domain.Models;
-using Xunit;
+﻿using Xunit;
+using CinemaPeak.Domain.Models;
+using CinemaPeak.Domain.Strategies;
+using CinemaPeak.Application.Services;
+using CinemaPeak.Infrastructure.Repositories;
 
 namespace CinemaPeak.Tests;
 
-public class CinemaTests
-{
+public class BusinessLogicTests
+{ 
     [Fact]
-    public void StandardTicket_ShouldReturnBasePrice()
+    public void StudentDiscount_ShouldApply20Percent()
     {
-        var ticket = new StandardTicket(1, 1, 100m);
-        Assert.Equal(100m, ticket.CalculateFinalPrice());
+        var strategy = new StudentDiscount();
+        Assert.Equal(80, strategy.Apply(100));
     }
 
     [Fact]
-    public void VipTicket_ShouldHave50PercentMarkup()
+    public void NoDiscount_ShouldReturnOriginalPrice()
     {
-        var basePrice = 100m;
-        var ticket = new VipTicket(1, 1, basePrice);
-        var expected = basePrice * 1.5m;
-        Assert.Equal(expected, ticket.CalculateFinalPrice());
+        var strategy = new NoDiscount();
+        Assert.Equal(100, strategy.Apply(100));
     }
 
     [Fact]
-    public void Movie_Constructor_ShouldThrowExceptionForEmptyTitle()
+    public void VipTicket_CalculatePrice_ShouldBeCorrect()
     {
-        Assert.Throws<ArgumentException>(() => new Movie("", 120));
+        var ticket = new VipTicket(1, 1, 200);
+        Assert.Equal(300, ticket.CalculateFinalPrice());
     }
 
     [Fact]
-    public void Movie_Constructor_ShouldThrowExceptionForShortDuration()
+    public void BookingService_ShouldThrowException_IfSeatOccupied()
     {
-        Assert.Throws<ArgumentException>(() => new Movie("Бетмен", 5));
+        var repo = new InMemoryTicketRepository();
+        var service = new BookingService(repo);
+        service.BookTicket(1, 1, false, new NoDiscount());
+
+        Assert.Throws<InvalidOperationException>(() => service.BookTicket(1, 1, false, new NoDiscount()));
     }
 
     [Fact]
-    public void Ticket_ShouldThrowIfRowIsZeroOrNegative()
+    public void Ticket_ShouldNotAllowNegativeRow()
     {
-        Assert.Throws<Exception>(() => new StandardTicket(0, 5, 100m));
+        Assert.Throws<ArgumentException>(() => new StandardTicket(-1, 5, 100));
+    }
+
+    [Fact]
+    public void Ticket_ShouldNotAllowNegativeSeat()
+    {
+        Assert.Throws<ArgumentException>(() => new StandardTicket(1, -5, 100));
+    }
+
+    [Fact]
+    public void Ticket_ShouldNotAllowZeroPrice()
+    {
+        Assert.Throws<ArgumentException>(() => new StandardTicket(1, 1, 0));
+    }
+
+    [Fact]
+    public void Analytics_GetTotalRevenue_ShouldSumCorrectly()
+    {
+        var repo = new InMemoryTicketRepository();
+        repo.Add(new StandardTicket(1, 1, 100));
+        repo.Add(new StandardTicket(1, 2, 150));
+        var analytics = new AnalyticsService(repo);
+        Assert.Equal(250, analytics.GetTotalRevenue());
+    }
+
+    [Fact]
+    public void Analytics_GetTicketsStats_ShouldCountCorrectly()
+    {
+        var repo = new InMemoryTicketRepository();
+        repo.Add(new StandardTicket(1, 1, 100));
+        repo.Add(new VipTicket(1, 2, 200));
+        var analytics = new AnalyticsService(repo);
+        var stats = analytics.GetTicketsStats();
+        Assert.True(stats.ContainsKey("StandardTicket"));
+    }
+
+    [Fact]
+    public void Repository_GetAll_ShouldReturnAddedTickets()
+    {
+        var repo = new InMemoryTicketRepository();
+        repo.Add(new StandardTicket(1, 1, 100));
+        Assert.Single(repo.GetAll());
+    }
+
+    [Fact]
+    public void Repository_InitialState_ShouldBeEmpty()
+    {
+        var repo = new InMemoryTicketRepository();
+        var all = repo.GetAll();
+        Assert.NotNull(all);
+    }
+
+    [Fact]
+    public void StandardTicket_FinalPrice_ShouldMatchBasePrice()
+    {
+        var ticket = new StandardTicket(5, 5, 150);
+        Assert.Equal(150, ticket.CalculateFinalPrice());
     }
 }

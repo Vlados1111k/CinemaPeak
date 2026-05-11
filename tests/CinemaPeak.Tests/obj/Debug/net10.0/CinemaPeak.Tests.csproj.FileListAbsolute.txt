@@ -101,3 +101,5 @@ C:\Users\Komp\Desktop\програмування\CinemaPeak\tests\CinemaPeak.Tes
 C:\Users\Komp\Desktop\програмування\CinemaPeak\tests\CinemaPeak.Tests\obj\Debug\net10.0\CinemaPeak.Tests.pdb
 C:\Users\Komp\Desktop\програмування\CinemaPeak\tests\CinemaPeak.Tests\obj\Debug\net10.0\CinemaPeak.Tests.genruntimeconfig.cache
 C:\Users\Komp\Desktop\програмування\CinemaPeak\tests\CinemaPeak.Tests\obj\Debug\net10.0\ref\CinemaPeak.Tests.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\tests\CinemaPeak.Tests\bin\Debug\net10.0\CinemaPeak.Infrastructure.dll
+C:\Users\Komp\Desktop\програмування\CinemaPeak\tests\CinemaPeak.Tests\bin\Debug\net10.0\CinemaPeak.Infrastructure.pdb

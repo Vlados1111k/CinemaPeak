@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CinemaPeak.Console")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b50e83ab50b5e3abc21daff8a742bb772394294")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5c4cea6c71df1413c720dfd339bd19f24a73024")]
 [assembly: System.Reflection.AssemblyProductAttribute("CinemaPeak.Console")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CinemaPeak.Console")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
