@@ -1,22 +1,24 @@
-sequenceDiagram
-    actor User
-    participant App as BookingService
-    participant Repo as ITicketRepository
-    participant Store as JsonDataStore
-    participant File as tickets.json
+# Діаграма послідовності: Процес бронювання
 
-    User->>App: BookTicket(row, seat, isVip, strategy)
-    App->>Repo: GetAll()
-    Repo-->>App: List of tickets
-    Note over App: Перевірка LINQ: .Any(t => t.Row == row && t.Seat == seat)
+```mermaid
+sequenceDiagram
+    participant U as Користувач
+    participant S as BookingService
+    participant R as TicketRepository
+    participant D as JsonDataStore
+
+    U->>S: BookTicket(ряд, місце, VIP, знижка)
+    S->>R: GetAll()
+    R-->>S: Список існуючих квитків
+    Note over S: Перевірка LINQ: .Any(...)
     
-    alt Місце зайняте
-        App-->>User: Throw InvalidOperationException
+    alt Місце вже зайняте
+        S-->>U: Помилка: InvalidOperationException
     else Місце вільне
-        App->>App: CalculateFinalPrice(strategy)
-        App->>Repo: Add(new Ticket)
-        Repo->>Store: SaveAsync(allTickets)
-        Store->>File: Write JSON to disk
-        Repo-->>App: Success
-        App-->>User: "Квиток заброньовано!"
+        S->>S: Розрахунок ціни (Strategy)
+        S->>R: Add(новий квиток)
+        R->>D: SaveAsync(оновлений список)
+        D-->>R: Збережено у файл
+        R-->>S: Підтвердження
+        S-->>U: Повідомлення "Заброньовано!"
     end
