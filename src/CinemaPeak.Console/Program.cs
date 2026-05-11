@@ -1,27 +1,21 @@
 ﻿using CinemaPeak.Application.Services;
 using CinemaPeak.Infrastructure.Repositories;
-
-Console.WriteLine("Ласкаво просимо до CinemaPeak");
+using CinemaPeak.Domain.Strategies;
 
 var repo = new InMemoryTicketRepository();
 
 var bookingService = new BookingService(repo);
+var analytics = new AnalyticsService(repo);
 
-Console.Write("Введіть ряд: ");
-int row = int.Parse(Console.ReadLine() ?? "1");
+Console.WriteLine("Аналітика");
 
-Console.Write("Введіть місце: ");
-int seat = int.Parse(Console.ReadLine() ?? "1");
+bookingService.BookTicket(1, 10, true, new NoDiscount());
 
-Console.Write("Ви VIP-клієнт? (так/ні): ");
-bool isVip = Console.ReadLine()?.ToLower() == "так";
+Console.WriteLine($"1. Загальна каса: {analytics.GetTotalRevenue()} грн");
 
-try 
+var stats = analytics.GetTicketsStats();
+Console.WriteLine("2. Статистика по типах:");
+foreach (var s in stats)
 {
-    bookingService.CreateBooking(row, seat, isVip);
-    Console.WriteLine("Операція завершена успішно!");
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Помилка: {ex.Message}");
+    Console.WriteLine($"- {s.Key}: {s.Value} шт.");
 }
