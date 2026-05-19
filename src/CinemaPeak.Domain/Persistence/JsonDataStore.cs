@@ -1,23 +1,54 @@
 using System.Text.Json;
-using CinemaPeak.Domain.Interfaces;
+
 namespace CinemaPeak.Infrastructure.Persistence;
 
-public class JsonDataStore<T> : IDataStore<T>
+public class JsonDataStore<T>
 {
     private readonly string _filePath;
 
-    public JsonDataStore(string fileName) => _filePath = fileName;
-
-    public async Task SaveAsync(IReadOnlyCollection<T> items, CancellationToken ct = default)
+    public JsonDataStore(string fileName)
     {
-        var json = JsonSerializer.Serialize(items, new JsonSerializerOptions { WriteIndented = true });
-        await File.WriteAllTextAsync(_filePath, json, ct);
+        _filePath = Path.IsPathRooted(fileName) 
+            ? fileName 
+            : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
     }
 
-    public async Task<IReadOnlyCollection<T>> LoadAsync(CancellationToken ct = default)
+    public async Task SaveAsync(IEnumerable<T> data)
+    {
+        try
+        {
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            var json = JsonSerializer.Serialize(data, options);
+            await File.WriteAllTextAsync(_filePath, json);
+        }
+        catch (IOException ex)
+        {
+            Console.WriteLine($"[Error I/O]: Не вдалося записати дані у файл {_filePath}. Причина: {ex.Message}");
+            throw;
+        }
+    }
+
+    public async Task<List<T>> LoadAsync()
     {
         if (!File.Exists(_filePath)) return new List<T>();
-        var json = await File.ReadAllTextAsync(_filePath, ct);
-        return JsonSerializer.Deserialize<List<T>>(json) ?? new List<T>();
+
+        try
+        {
+            var json = await File.ReadAllTextAsync(_filePath);
+            
+            if (string.IsNullOrWhiteSpace(json)) return new List<T>();
+
+            return JsonSerializer.Deserialize<List<T>>(json) ?? new List<T>();
+        }
+        catch (JsonException ex)
+        {
+            Console.WriteLine($"[Fault Handling]: Файл даних {_filePath} пошкоджений. Стан скинуто. Деталі: {ex.Message}");
+            return new List<T>();
+        }
+        catch (IOException ex)
+        {
+            Console.WriteLine($"[Error I/O]: Помилка доступу до файлу {_filePath}: {ex.Message}");
+            return new List<T>();
+        }
     }
 }

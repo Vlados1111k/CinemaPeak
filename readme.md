@@ -1,9 +1,6 @@
 # CinemaPeak
 
-## Як запустити:
-1. `dotnet run --project src/CinemaPeak.Console`
+**CinemaPeak** - це консольна система бронювання квитків у кінотеатрі.
 
-## Що зроблено:
-- Архітектура (Domain, Application, Infrastructure)
-- Юніт-тести
-- GitHub Actions
+## Як запустити програму:
+1. `dotnet run --project src/CinemaPeak.Console`

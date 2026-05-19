@@ -1,0 +1,462 @@
+{
+  "CinemaPeak.Application.dll": {
+    "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Application\\Service\\AnalyticsService.cs": {
+      "CinemaPeak.Application.Services.AnalyticsService": {
+        "System.Decimal CinemaPeak.Application.Services.AnalyticsService::GetTotalRevenue()": {
+          "Lines": {
+            "16": 4
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<CinemaPeak.Domain.Models.Ticket> CinemaPeak.Application.Services.AnalyticsService::GetTicketsByRow(System.Int32)": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<CinemaPeak.Domain.Models.Ticket> CinemaPeak.Application.Services.AnalyticsService::GetTicketsSortedByPrice()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.Dictionary`2<System.String,System.Int32> CinemaPeak.Application.Services.AnalyticsService::GetTicketsStats()": {
+          "Lines": {
+            "25": 1,
+            "26": 1,
+            "27": 2,
+            "28": 5,
+            "29": 1
+          },
+          "Branches": []
+        },
+        "System.Void CinemaPeak.Application.Services.AnalyticsService::.ctor(CinemaPeak.Domain.Interfaces.ITicketRepository)": {
+          "Lines": {
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Application\\Service\\BookingService.cs": {
+      "CinemaPeak.Application.Services.BookingService": {
+        "System.Void CinemaPeak.Application.Services.BookingService::BookTicket(System.Int32,System.Int32,System.Boolean,CinemaPeak.Domain.Strategies.IDiscountStrategy)": {
+          "Lines": {
+            "17": 5,
+            "18": 5,
+            "19": 6,
+            "20": 1,
+            "21": 1,
+            "24": 4,
+            "25": 4,
+            "26": 4,
+            "28": 4,
+            "29": 4
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 2
+            },
+            {
+              "Line": 19,
+              "Offset": 53,
+              "EndOffset": 146,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 4
+            },
+            {
+              "Line": 24,
+              "Offset": 147,
+              "EndOffset": 149,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 3
+            },
+            {
+              "Line": 24,
+              "Offset": 147,
+              "EndOffset": 175,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void CinemaPeak.Application.Services.BookingService::.ctor(CinemaPeak.Domain.Interfaces.ITicketRepository)": {
+          "Lines": {
+            "11": 5,
+            "12": 5,
+            "13": 5,
+            "14": 5
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "CinemaPeak.Domain.dll": {
+    "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Domain\\Persistence\\JsonDataStore.cs": {
+      "CinemaPeak.Infrastructure.Persistence.JsonDataStore`1": {
+        "System.Void CinemaPeak.Infrastructure.Persistence.JsonDataStore`1::.ctor(System.String)": {
+          "Lines": {
+            "9": 10,
+            "10": 10,
+            "11": 10,
+            "12": 10,
+            "13": 10,
+            "14": 10
+          },
+          "Branches": [
+            {
+              "Line": 11,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 11,
+              "Offset": 15,
+              "EndOffset": 35,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 9
+            }
+          ]
+        }
+      },
+      "CinemaPeak.Infrastructure.Persistence.JsonDataStore`1/<LoadAsync>d__3": {
+        "System.Void CinemaPeak.Infrastructure.Persistence.JsonDataStore`1/<LoadAsync>d__3::MoveNext()": {
+          "Lines": {
+            "32": 7,
+            "33": 8,
+            "36": 6,
+            "37": 6,
+            "39": 7,
+            "41": 5,
+            "43": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "53": 7
+          },
+          "Branches": [
+            {
+              "Line": 33,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 33,
+              "Offset": 36,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 11
+            },
+            {
+              "Line": 39,
+              "Offset": 214,
+              "EndOffset": 216,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 1
+            },
+            {
+              "Line": 39,
+              "Offset": 214,
+              "EndOffset": 227,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 5
+            },
+            {
+              "Line": 41,
+              "Offset": 240,
+              "EndOffset": 242,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 240,
+              "EndOffset": 248,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 4
+            }
+          ]
+        }
+      },
+      "CinemaPeak.Infrastructure.Persistence.JsonDataStore`1/<SaveAsync>d__2": {
+        "System.Void CinemaPeak.Infrastructure.Persistence.JsonDataStore`1/<SaveAsync>d__2::MoveNext()": {
+          "Lines": {
+            "17": 6,
+            "19": 6,
+            "20": 6,
+            "21": 6,
+            "22": 6,
+            "23": 5,
+            "24": 1,
+            "25": 1,
+            "26": 1,
+            "27": 1,
+            "29": 5
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Domain\\Strategies\\Strategy.cs": {
+      "CinemaPeak.Domain.Strategies.NoDiscount": {
+        "System.Decimal CinemaPeak.Domain.Strategies.NoDiscount::ApplyDiscount(System.Decimal)": {
+          "Lines": {
+            "11": 2,
+            "12": 2,
+            "13": 2
+          },
+          "Branches": []
+        }
+      },
+      "CinemaPeak.Domain.Strategies.StudentDiscount": {
+        "System.Decimal CinemaPeak.Domain.Strategies.StudentDiscount::ApplyDiscount(System.Decimal)": {
+          "Lines": {
+            "19": 2,
+            "20": 2,
+            "21": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Domain\\Models\\Movies.cs": {
+      "CinemaPeak.Domain.Models.Movie": {
+        "System.String CinemaPeak.Domain.Models.Movie::get_Title()": {
+          "Lines": {
+            "4": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 CinemaPeak.Domain.Models.Movie::get_Duration()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Void CinemaPeak.Domain.Models.Movie::.ctor(System.String,System.Int32)": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": [
+            {
+              "Line": 8,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 8,
+              "Offset": 16,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 36,
+              "EndOffset": 38,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 36,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Domain\\Models\\Tickets.cs": {
+      "CinemaPeak.Domain.Models.Ticket": {
+        "System.Guid CinemaPeak.Domain.Models.Ticket::get_Id()": {
+          "Lines": {
+            "9": 42
+          },
+          "Branches": []
+        },
+        "System.Int32 CinemaPeak.Domain.Models.Ticket::get_Row()": {
+          "Lines": {
+            "10": 10
+          },
+          "Branches": []
+        },
+        "System.Int32 CinemaPeak.Domain.Models.Ticket::get_Seat()": {
+          "Lines": {
+            "11": 10
+          },
+          "Branches": []
+        },
+        "System.Decimal CinemaPeak.Domain.Models.Ticket::get_BasePrice()": {
+          "Lines": {
+            "12": 13
+          },
+          "Branches": []
+        },
+        "System.Void CinemaPeak.Domain.Models.Ticket::.ctor(System.Int32,System.Int32,System.Decimal)": {
+          "Lines": {
+            "14": 34,
+            "15": 34,
+            "16": 34,
+            "17": 3,
+            "19": 31,
+            "20": 6,
+            "22": 25,
+            "23": 25,
+            "24": 25,
+            "25": 25
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 16,
+              "Offset": 32,
+              "EndOffset": 45,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 31
+            },
+            {
+              "Line": 19,
+              "Offset": 47,
+              "EndOffset": 49,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 28
+            },
+            {
+              "Line": 19,
+              "Offset": 47,
+              "EndOffset": 58,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 3
+            },
+            {
+              "Line": 19,
+              "Offset": 61,
+              "EndOffset": 63,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 6
+            },
+            {
+              "Line": 19,
+              "Offset": 61,
+              "EndOffset": 74,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 25
+            }
+          ]
+        }
+      },
+      "CinemaPeak.Domain.Models.StandardTicket": {
+        "System.Decimal CinemaPeak.Domain.Models.StandardTicket::CalculateFinalPrice()": {
+          "Lines": {
+            "35": 3
+          },
+          "Branches": []
+        },
+        "System.Void CinemaPeak.Domain.Models.StandardTicket::.ctor(System.Int32,System.Int32,System.Decimal)": {
+          "Lines": {
+            "33": 69
+          },
+          "Branches": []
+        }
+      },
+      "CinemaPeak.Domain.Models.VipTicket": {
+        "System.Decimal CinemaPeak.Domain.Models.VipTicket::CalculateFinalPrice()": {
+          "Lines": {
+            "43": 1
+          },
+          "Branches": []
+        },
+        "System.Void CinemaPeak.Domain.Models.VipTicket::.ctor(System.Int32,System.Int32,System.Decimal)": {
+          "Lines": {
+            "41": 15
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "CinemaPeak.Infrastructure.dll": {
+    "C:\\Users\\Komp\\Desktop\\програмування\\CinemaPeak\\src\\CinemaPeak.Infrastructure\\Repositories\\InMemoryTicketRepository.cs": {
+      "CinemaPeak.Infrastructure.Repositories.InMemoryTicketRepository": {
+        "System.Void CinemaPeak.Infrastructure.Repositories.InMemoryTicketRepository::Add(CinemaPeak.Domain.Models.Ticket)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IEnumerable`1<CinemaPeak.Domain.Models.Ticket> CinemaPeak.Infrastructure.Repositories.InMemoryTicketRepository::GetAll()": {
+          "Lines": {
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        },
+        "System.Void CinemaPeak.Infrastructure.Repositories.InMemoryTicketRepository::.ctor()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

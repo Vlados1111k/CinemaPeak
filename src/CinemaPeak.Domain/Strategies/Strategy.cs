@@ -1,11 +1,22 @@
 namespace CinemaPeak.Domain.Strategies;
 
-public interface IDiscountStrategy { decimal Apply(decimal price); }
-
-public class StudentDiscount : IDiscountStrategy { 
-    public decimal Apply(decimal price) => price * 0.8m; 
+public interface IDiscountStrategy
+{
+    decimal ApplyDiscount(decimal originalPrice);
 }
 
-public class NoDiscount : IDiscountStrategy { 
-    public decimal Apply(decimal price) => price; 
+public class NoDiscount : IDiscountStrategy
+{
+    public decimal ApplyDiscount(decimal originalPrice)
+    {
+        return originalPrice; 
+    }
+}
+
+public class StudentDiscount : IDiscountStrategy
+{
+    public decimal ApplyDiscount(decimal originalPrice)
+    {
+        return originalPrice * 0.8m; 
+    }
 }

@@ -1,5 +1,9 @@
+using System.Text.Json.Serialization;
+
 namespace CinemaPeak.Domain.Models;
 
+[JsonDerivedType(typeof(StandardTicket), typeDiscriminator: "standard")]
+[JsonDerivedType(typeof(VipTicket), typeDiscriminator: "vip")]
 public abstract class Ticket 
 {
     public Guid Id { get; } = Guid.NewGuid();
@@ -7,9 +11,9 @@ public abstract class Ticket
     public int Seat { get; }
     public decimal BasePrice { get; }
 
-    protected Ticket(int row, int seat, decimal price) 
+    protected Ticket(int row, int seat, decimal basePrice) 
     {
-        if (price <= 0) 
+        if (basePrice <= 0) 
             throw new ArgumentException("Ціна має бути більшою за нуль");
         
         if (row <= 0 || seat <= 0) 
@@ -17,7 +21,7 @@ public abstract class Ticket
 
         Row = row;
         Seat = seat;
-        BasePrice = price;
+        BasePrice = basePrice;
     }
 
     public abstract decimal CalculateFinalPrice();
@@ -25,12 +29,16 @@ public abstract class Ticket
 
 public class StandardTicket : Ticket 
 {
-    public StandardTicket(int row, int seat, decimal price) : base(row, seat, price) { }
+    [JsonConstructor]
+    public StandardTicket(int row, int seat, decimal basePrice) : base(row, seat, basePrice) { }
+    
     public override decimal CalculateFinalPrice() => BasePrice;
 }
 
 public class VipTicket : Ticket 
 {
-    public VipTicket(int row, int seat, decimal price) : base(row, seat, price) { }
+    [JsonConstructor]
+    public VipTicket(int row, int seat, decimal basePrice) : base(row, seat, basePrice) { }
+    
     public override decimal CalculateFinalPrice() => BasePrice * 1.5m; 
 }
