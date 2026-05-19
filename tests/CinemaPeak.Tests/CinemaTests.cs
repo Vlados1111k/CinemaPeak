@@ -36,6 +36,6 @@ public class CinemaTests
     [Fact]
     public void Ticket_ShouldThrowIfRowIsZeroOrNegative()
     {
-        Assert.Throws<Exception>(() => new StandardTicket(0, 5, 100m));
+    Assert.Throws<ArgumentException>(() => new StandardTicket(0, 5, 100));
     }
 }
