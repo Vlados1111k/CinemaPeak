@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+
+*.cobertura.xml
+**/TestResults/
+
+.vscode/
+.idea/
+*.user
