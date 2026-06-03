@@ -1,9 +1,5 @@
-**/bin/
-**/obj/
-
-*.cobertura.xml
-**/TestResults/
-
+bin/
+obj/
+*.msCoverageSourceRootsMapping
+_BuildTasks/
 .vscode/
-.idea/
-*.user
